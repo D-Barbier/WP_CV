@@ -2,8 +2,8 @@
 get_header();
 ?>
 
-
-<h1>INDEX.PHP</h1>
+ 
+<h1>HOME.PHP</h1>
 <section class="flex">
 
 <?php 
@@ -15,8 +15,7 @@ get_header();
             <h1><?php the_title(); // affichage du titre ?></h1>
             <?php the_post_thumbnail('thumbnail'); ?>
             <div>
-                <!-- <?php the_excerpt(); // extrait du post ?>  -->
-                 <?php the_content(); // extrait du post ?> 
+                <?php the_excerpt(); // extrait du post ?> 
             </div>
             
         </article>

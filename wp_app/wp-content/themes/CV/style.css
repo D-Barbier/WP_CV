@@ -1,0 +1,190 @@
+/* BASE */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: black;
+    --color2: white;
+    --color3: aqua;
+}
+
+
+
+
+
+/* FIN BASE */
+
+/* MENU */
+.menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color2);
+    text-align: left;
+    list-style: none;
+    padding: 0rem;
+    flex-direction: column;
+    gap: 0.1rem;
+    justify-content: flex-start;
+    background-color: var(--color2);
+    margin: 5rem 0 0 0;
+}
+
+.menu-cv-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#menuToggle {
+    font-size: 3rem;
+    text-decoration: none;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+}
+
+.nav-menu {
+    position: relative;
+}
+
+.menu.active {
+    display: flex;
+
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--color2);
+    transition: all ease 0.8s;
+}
+
+.menu li{
+    padding: 1rem;
+    background-color: var(--color1);
+}
+
+.menu li:hover {
+    background-color: var(--color3);
+}
+
+
+/* FIN MENU*/
+
+
+/* BREADCRUMBS */
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    padding: 0rem 2rem;
+    
+}
+
+.breadcrumbs li {
+    padding-right: 2rem;
+}
+
+/* FIN BREADCRUMBS */
+
+
+/* DEBUT MAIN */
+main {
+    width: 80%;
+    margin: auto;
+    flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* FIN MAIN */
+
+/* FOOTER */
+
+#menu-footer{
+    display: block;
+    width: 100%;
+    position: static;
+    margin: 0rem;
+}
+
+
+footer {
+  background-color: #34475E;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* FIN FOOTER */
+
+
+@media (min-width: 768px) {
+
+/* MENU */
+
+#menuToggle{
+    display: none;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0rem;
+}
+
+.menu-cv-container{
+    display: block;
+}
+
+.menu-item{
+    width: 100%;
+}
+
+/* FIN MENU */
+
+
+/* BREADCRUMBS */
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+    padding: 0rem 4rem;
+    
+}
+
+.breadcrumbs li {
+    padding-right: 4rem;
+}
+
+/* FIN BREADCRUMBS */
+
+
+/* DEBUT MAIN */
+/* main {
+    width: 50%;
+    margin: auto;
+} */
+
+/* FIN MAIN */
+
+/* FOOTER */
+
+
+
+/* FIN FOOTER */
+
+
+}

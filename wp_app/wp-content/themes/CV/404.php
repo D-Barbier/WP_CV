@@ -3,7 +3,8 @@ get_header();
 ?>
 
 
-<h1>INDEX.PHP</h1>
+<h1>404.php</h1>
+
 <section class="flex">
 
 <?php 
@@ -15,8 +16,7 @@ get_header();
             <h1><?php the_title(); // affichage du titre ?></h1>
             <?php the_post_thumbnail('thumbnail'); ?>
             <div>
-                <!-- <?php the_excerpt(); // extrait du post ?>  -->
-                 <?php the_content(); // extrait du post ?> 
+                <?php the_excerpt(); // extrait du post ?> 
             </div>
             
         </article>
@@ -28,6 +28,11 @@ get_header();
 ?>
 
 </section>
+
+<aside>
+    <h3>SIDEBAR</h3>
+    <h4>Widgets</h4>
+</aside>
 
 <?php 
 get_footer();
