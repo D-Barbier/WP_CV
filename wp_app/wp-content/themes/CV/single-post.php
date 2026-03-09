@@ -1,0 +1,66 @@
+<?php
+get_header();
+?>
+
+
+
+
+<h1>SINGLE-POST.PHP</h1>
+<section class="flex">
+
+    <?php
+    if (have_posts()): // si l'url appelé correspond à du contenu  (article, page, auteur, catégorie...)
+        while (have_posts()): // pour chaque élément trouvé... 
+            the_post(); // on charge les données du contenu
+    ?>
+            <article class="montheme-article">
+                <header>
+                    <h1><?php the_title(); // affichage du titre 
+                        ?></h1>
+                    <aside>
+                        <p>écrit par <?php the_author_link() ?> le <?php the_date() ?>
+                            dans <?php the_category(', ') ?>
+                        </p>
+                        <p>modifié le <?php the_modified_date() ?> par <?php the_modified_author() ?></p>
+                    </aside>
+                </header>
+
+                <?php the_post_thumbnail('thumbnail'); ?>
+                <div>
+                    <?php the_content(); // extrait du post 
+                    ?>
+                </div>
+                <aside>
+                    <?php comments_template(); ?>
+                </aside>
+
+            </article>
+    <?php
+        endwhile;
+    else:
+        echo 'Aucun contenu';
+    endif;
+    ?>
+      <div class="pagination">
+        <div class="pagination-previous">
+            <?php previous_post_link(); ?>
+        </div>
+        <div class="pagination-next">
+            <?php next_post_link();  ?>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+get_footer();

@@ -5,6 +5,6 @@ document.querySelector('main').addEventListener('click', function() {
     menu.classList.remove('active');
 });
 
-menuToggle.addEventListener('click', function() {
-    menu.classList.toggle('active');
-});
+// menuToggle.addEventListener('click', function() {
+//     menu.classList.toggle('active');
+// });

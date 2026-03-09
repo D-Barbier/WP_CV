@@ -32,6 +32,10 @@ get_header();
 <aside>
     <h3>SIDEBAR</h3>
     <h4>Widgets</h4>
+    <?php
+
+        dynamic_sidebar('main-sidebar');
+    ?>
 </aside>
 
 <?php 
