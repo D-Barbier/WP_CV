@@ -2,20 +2,21 @@
 get_header();
 ?>
 
- 
+
 <h1>HOME.PHP</h1>
 <section class="flex">
 
-<?php 
-    if(have_posts()): // si l'url appelé correspond à du contenu  (article, page, auteur, catégorie...)
-        while(have_posts()): // pour chaque élément trouvé... 
+    <?php
+    if (have_posts()): // si l'url appelé correspond à du contenu  (article, page, auteur, catégorie...)
+        while (have_posts()): // pour chaque élément trouvé... 
             the_post(); // on charge les données du contenu
     ?>
-        <article class="montheme-article"> 
-             <header>
+            <article class="montheme-article">
+                <header>
                     <h1>
                         <a href="<?php the_permalink() ?>">
-                            <?php the_title(); // affichage du titre ?>
+                            <?php the_title(); // affichage du titre 
+                            ?>
                         </a>
                     </h1>
                     <aside>
@@ -24,24 +25,31 @@ get_header();
                         </p>
                         <p>modifié le <?php the_modified_date() ?> par <?php the_modified_author() ?></p>
                     </aside>
-                </header> 
+                </header>
 
 
 
-            <?php the_post_thumbnail('thumbnail'); ?>
-            <div>
-                <?php the_excerpt(); // extrait du post ?> 
-            </div>
-            
-        </article>
+                <?php the_post_thumbnail('thumbnail'); ?>
+                <div>
+                    <?php the_excerpt(); // extrait du post 
+                    ?>
+                </div>
+
+            </article>
     <?php
         endwhile;
-    else: 
+    else:
         echo 'Aucun contenu';
     endif;
-?>
+    ?>
 
 </section>
 
-<?php 
+<div class="pagination">
+    <div>
+        <?php the_posts_pagination(); ?>
+    </div>
+</div>
+
+<?php
 get_footer();

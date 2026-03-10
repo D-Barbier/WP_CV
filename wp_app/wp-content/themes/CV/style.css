@@ -116,10 +116,26 @@ main {
     /* Prend tout l'espace disponible */
 }
 
+/* ARTICLE*/
 .montheme-article div p{
     text-align: justify;
 }
+
+.montheme-article img{
+    width: 100%;
+
+}
+
 /* FIN MAIN */
+
+/* DEBUT PAGINATION */
+
+.pagination{
+    display: flex;
+}
+
+
+/* FIN PAGINATION */
 
 /* FOOTER */
 
@@ -137,12 +153,20 @@ main {
 footer {
     background-color: #34475E;
     color: var(--color2);
-    text-align: center;
     padding: 2rem 5rem;
 }
 
+footer .wp-block-media-text__media{
+    text-align: center;
+}
+
+footer .wp-block-media-text__media .wp-image-142.size-full{
+    width: 25rem;
+
+}
  #copyright{
         margin: 0 0 1rem 0;
+        text-align: center;
     }
 
 /* FIN FOOTER */
@@ -204,7 +228,7 @@ footer {
         max-width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.5rem;
         padding: 4rem;
     }
 
@@ -212,11 +236,11 @@ footer {
         width: 100%;
     }
 
-    main > section {
-        width: 96rem;
+    .home main > section {
+        width: 88rem;
     }
 
-    main > aside{
+    .home main > aside{
         width: 23rem;
     }
    
