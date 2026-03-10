@@ -8,3 +8,6 @@ document.querySelector('main').addEventListener('click', function() {
 // menuToggle.addEventListener('click', function() {
 //     menu.classList.toggle('active');
 // });
+
+
+document.getElementById('searchsubmit').value = "🔍";

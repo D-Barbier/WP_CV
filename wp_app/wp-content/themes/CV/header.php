@@ -23,7 +23,7 @@
     <!-- Point d'entrée pour que WordPress/les plugins ajoutent du contenu après <body> -->
     <?php wp_body_open(); ?>
 
-    <header class="">
+    <header class="mainHeader">
         <!-- Icône/menu pour ouvrir le menu de navigation (surtout utile sur mobile) -->
         <a href="#" id="menuToggle">☰</a>
 
@@ -31,13 +31,18 @@
             <div id="menu">
                 <!-- Affiche le menu associé à l'emplacement "main" du thème -->
                 <?php wp_nav_menu(['theme_location' => 'main']) ?>
+              
             </div>
+           
         </nav>
+    
 
         <!-- Affiche le fil d’Ariane sur toutes les pages sauf la page d'accueil -->
         <?php if (!is_front_page()): ?>
             <?php dba_breadcrumbs(); ?>
         <?php endif; ?>
+
+        <?php get_search_form() ?>
     </header>
 
     <main>
