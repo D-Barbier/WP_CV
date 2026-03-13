@@ -1,3 +1,7 @@
+/*
+Theme Name : CV
+*/
+
 /* BASE */
 html {
     font-size: 62.5%;
@@ -239,9 +243,17 @@ footer .wp-block-media-text__media .wp-image-142.size-full{
         height: 3rem;
     }
 
+    #s{
+        width: 10rem;
+    }
+
     .searchform div{
         display: block;
         padding: 0.5rem 0.5rem 0rem 0.5rem;
+    }
+
+    .home .searchform div{
+    padding-top: 0.5rem;
     }
     /* FIN SEARCH BAR */
 
