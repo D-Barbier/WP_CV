@@ -91,16 +91,16 @@ body {
 
 /* SEARCH BAR */
 
-.searchform div{
-    display: flex;
-    flex-direction: column;
-    padding: 0rem 8rem;
+.search-form{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 }
 
-.home .searchform div{
-    padding-top: 1rem;
+.search-submit{
+    cursor: pointer;
+    border-radius: 0.5rem;
 }
-
 
 
 /* FIN SEARCH BAR */

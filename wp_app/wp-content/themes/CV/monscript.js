@@ -5,9 +5,9 @@ document.querySelector('main').addEventListener('click', function() {
     menu.classList.remove('active');
 });
 
-// menuToggle.addEventListener('click', function() {
-//     menu.classList.toggle('active');
-// });
 
+const searchsubmit = document.querySelector('.search-submit');
 
-document.getElementById('searchsubmit').value = "🔍";
+if(searchsubmit){
+    searchsubmit.value = "🔍";
+}
