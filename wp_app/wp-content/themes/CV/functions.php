@@ -17,18 +17,35 @@ function db_theme_menu_sidebar()
         'main' => 'Menu Principal',
         'foot' => 'Menu de Bas de page',
     ]);
+}
+// Lance l’enregistrement des menus et sidebar au chargement de WordPress
+add_action('init', 'db_theme_menu_sidebar');
 
-    // Déclare une zone de widgets pour la sidebar d'accueil
+
+function dba_widget_init(){
+
+// Déclare une zone de widgets pour la sidebar d'accueil
     register_sidebar([
         'id' => 'main-sidebar',
         'name' => 'Sidebar Accueil',
         'before_widget' => '<div class="main-sidebar">',
         'after_widget'  => '</div>',
     ]);
-}
-// Lance l’enregistrement des menus et sidebar au chargement de WordPress
-add_action('init', 'db_theme_menu_sidebar');
 
+	 register_sidebar(array(
+        'name'          => 'Footer Widget',        // Nom affiché dans l’admin
+        'id'            => 'footer-sidebar',       // ID utilisé dans le thème
+        'description'   => 'Zone de widgets dans le footer',
+        // HTML avant/après chaque widget
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        // HTML avant/après le titre du widget
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ));
+}
+
+add_action("widgets_init", "dba_widget_init");
 
 /**
  * Affiche un fil d’Ariane (breadcrumbs) simple.
@@ -55,25 +72,6 @@ function dba_breadcrumbs()
     // Fin du fil d’Ariane
     echo "</ol>";
 }
-
-
-// Crée une zone de widgets dans le footer
-function register_footer_widgets()
-{
-    register_sidebar(array(
-        'name'          => 'Footer Widget',        // Nom affiché dans l’admin
-        'id'            => 'footer-sidebar',       // ID utilisé dans le thème
-        'description'   => 'Zone de widgets dans le footer',
-        // HTML avant/après chaque widget
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
-        // HTML avant/après le titre du widget
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ));
-}
-// Active la zone de widgets du footer
-add_action('widgets_init', 'register_footer_widgets');
 
 
 // Change le texte à la fin des extraits (the_excerpt)

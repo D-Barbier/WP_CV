@@ -23,9 +23,44 @@ body {
 }
 
 :root {
-    --color1: black;
-    --color2: white;
-    --color3: aqua;
+    --bg: black;
+    --primary: #FFDE00;
+    --secondary: #B3A125;
+    --tertiary: #3B4CCA;
+    --fourth: #CC0000;
+    --fifth: #FF0000;
+    --header-top: 135px;
+}
+
+body.light {
+        --bg: white;
+        --primary: #3B4CCA;
+        --tertiary: #FFDE00;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: white;
+        --primary: #3B4CCA;
+        --tertiary: #FFDE00;
+    }
+
+    body.light {
+        --bg: black;
+        --primary: #FFDE00;
+        --tertiary: #3B4CCA;
+    }
+}
+
+
+
+@media print {
+    .site-header { display: none; }
+}
+
+@font-face {
+    font-family: OpenDys;
+    src: url('./fonts/OpenDyslexic-Regular.otf');
 }
 
 /* FIN BASE */
