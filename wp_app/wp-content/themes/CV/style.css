@@ -63,6 +63,37 @@ body.light {
     src: url('./fonts/OpenDyslexic-Regular.otf');
 }
 
+
+.test{
+    position: relative;
+    width: 36rem;
+}
+
+.date{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.montheme-article{
+   border: 0.2rem solid red;
+  
+  
+}
+
+/* .test >img{
+    max-height: 40rem;
+} */
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 /* FIN BASE */
 
 /* MENU */

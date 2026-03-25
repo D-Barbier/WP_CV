@@ -18,7 +18,7 @@ function db_theme_menu_sidebar()
         'foot' => 'Menu de Bas de page',
     ]);
 }
-// Lance l’enregistrement des menus et sidebar au chargement de WordPress
+// Lance l’enregistrement des menus 
 add_action('init', 'db_theme_menu_sidebar');
 
 

@@ -14,6 +14,23 @@ get_header();
             the_post(); // on charge les données du contenu
     ?>
             <article class="montheme-article">
+                <div class="test">
+                    <?php
+                // Must be inside a loop.
+
+                if (has_post_thumbnail()) {
+                    the_post_thumbnail('medium');
+                } else {
+                    
+                    echo '<img src="' . get_template_directory_uri(). '/images/test.png" />';
+                }
+                ?>
+                <div>
+                    <div class="date">
+                        <?php echo get_the_date(); ?>
+                    </div>
+                </div>
+
                 <header>
                     <h1>
                         <a href="<?php the_permalink() ?>">
@@ -21,21 +38,11 @@ get_header();
                             ?>
                         </a>
                     </h1>
-                    <aside>
-                        <p>écrit par <?php the_author_link() ?> le <?php the_date() ?>
-                            dans <?php the_category(', ') ?>
-                        </p>
-                        <p>modifié le <?php the_modified_date() ?> par <?php the_modified_author() ?></p>
-                    </aside>
                 </header>
-
-
-                <?php the_post_thumbnail('thumbnail'); ?>
                 <div>
                     <?php the_excerpt(); // extrait du post 
                     ?>
                 </div>
-
             </article>
     <?php
         endwhile;
