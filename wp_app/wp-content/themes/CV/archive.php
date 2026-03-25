@@ -19,10 +19,10 @@ get_header();
                 // Must be inside a loop.
 
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('medium');
+                    the_post_thumbnail('medium', ['class' => 'custom-thumb']);
                 } else {
-                    
-                    echo '<img src="' . get_template_directory_uri(). '/images/test.png" />';
+
+                    echo '<img class="custom-thumb" src="' . get_template_directory_uri(). '/images/test.png" />';
                 }
                 ?>
                 <div>

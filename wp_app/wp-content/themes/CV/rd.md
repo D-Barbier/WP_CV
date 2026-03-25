@@ -2,10 +2,10 @@
 
 ## Docker
 
-- **docker-compose.yml** pour la création du container  
-  - `docker compose up`  
-  - `docker ps`  
-  - `docker logs --follow [nom du container]`
+- creation du fichier **docker-compose.yml** 
+  - Dans le terminal `docker compose up` pour la création du container  
+  - `docker ps` pour voir les containers actif
+  - `docker logs --follow [nom du container]` 
 - Installation de WordPress via **localhost:portDuContainer**
 
 ---
@@ -13,31 +13,36 @@
 ### Fichier Obligatoire
 
 - `index.php`
-- `style.css` + commentaire avec `Theme Name : [NomDuTheme]`
+- `style.css` + commentaire avec:
+  - **Theme Name:** pour le nom du theme.
+  - **Description:** pour la description du theme.
+  - **Author:** pour le nom de l'auteur.
 
 ---
 
-### TIPS
+### TIPS POUR LES FICHIERS
 
 - **Template Hierarchy** : https://developer.wordpress.org/themes/classic-themes/basics/template-hierarchy/
 
 ---
 
-### Contenu
+### Contenu index.php
 
-- h2[NomDeLaPage]
+Si `header.php` / `footer.php` 
+- function
+  - `get_header();`  
+  - `get_footer();`
 
-### index.php
-
-- Boucle WP 
+- Coder la **Boucle WP** 
   - **documentation** : https://capitainewp.io/formations/developper-theme-wordpress/boucle-wordpress-template-tags/
-- Function
+- Function possible
   - `the_title();`  
   - `the_excerpt();`  
   - `the_content();`  
   - `the_post();`  
-  - `get_header();`  
-  - `get_footer();`
+
+- **documentation**: https://developer.wordpress.org/reference/functions/
+
 
 ---
 
@@ -52,6 +57,8 @@
   - `body_class()`  
   - `wp_body_open()`
 
+- **documentation** : https://capitainewp.io/formations/developper-theme-wordpress/header-footer-theme/
+
 ---
 
 ### footer.php
@@ -59,6 +66,8 @@
 - function
   - `wp_footer();`
 
+- **documentation** : https://capitainewp.io/formations/developper-theme-wordpress/header-footer-theme/
+  
 ---
 
 ### page.php
@@ -72,6 +81,8 @@
 - `previous_posts_link()` avec ou sans **s**
 - `the_post_thumbnail`
 - `the_author_link()`
+
+- **documentation**: https://developer.wordpress.org/reference/functions/
 
 ---
 
